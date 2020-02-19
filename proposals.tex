@@ -1,0 +1,29 @@
+\documentclass{amsart}
+
+\usepackage{fouche}
+
+\begin{document}
+\section{Categorical linguistics}
+Leggi questo paper \url{https://www.cs.cmu.edu/~fp/courses/15816-f16/misc/Lambek58.pdf} e di' cosa ne pensi; un input più preciso: l'upshot di quel lavoro è che un modello semplificato di linguaggio naturale è modellato da una categoria monoidale bichiusa. Le critiche mosse a questo modello sono state tante, ma è da tenere da conto che quando questo lavoro è stato scritto non avevamo niente di CT, a momenti nemmeno la def di aggiunzione.
+
+Ora, con categorie monoidali, 2-categorie forti e deboli, $n$-categorie, teoria dell'omotopia\dots{} dovrebbe essere possibile dire qualcosa di estremamente più sharp sulla stessa falsariga.
+
+Un approccio da non seguire è quello di questa cricca \url{https://arxiv.org/search/cs?searchtype=author&query=Sadrzadeh%2C+M}.
+\section{Categorical complexity theory}
+Leggi questo paper \url{https://arxiv.org/abs/1610.07737} e di' cosa ne pensi; leggi anche \url{https://arxiv.org/abs/1208.5205}, \url{https://arxiv.org/abs/1402.5687} e \url{https://arxiv.org/abs/1704.04882} e facciamo crittografia categoriale.
+\section{Categorical stochastic analysis}
+Leggi questo paper \url{https://arxiv.org/abs/1912.02769} e di' cosa ne pensi; un input più preciso: questo tipo di strutture, studiate anche in \url{https://arxiv.org/abs/1312.1445}, dovrebbero fare da fondazione categoriale all'analisi stocastica. In particolare, la mia impressione è che un nucleo di Markov, ossia una funzione
+\[
+f : X \times \Sigma_Y \to [0,1]
+\]
+che diventa una variabile aleatoria ristretta a $X$, e una misura di probabilità ristretta a $\Sigma_Y$ (=la sigma-algebra di uno spazio di misura $Y$), si possa descrivere nel contesto della seguente bicategoria di ``$S$-profuntori'': se $S : \Cat \to \Cat$ è una 2-monade,
+\begin{definition}
+  La bicategoria $\Prof_S$ degli \emph{$S$-profuntori} è definita ponendo 
+  \begin{itemize}
+    \item gli oggetti di $\Prof_S$ sono le categorie piccole;
+    \item le 1-celle $p : A\pto B$ sono funtori $A\times S(B)\to \Set$;
+    \item le 2-celle sono trasformazioni naturali di funtori.
+  \end{itemize}
+\end{definition}
+Ovviamente la stessa definizione funziona per categorie arricchite su una base monoidale (in questo caso, $[0,1]$ col prodotto, o qualcosa del genere). Il funtore $S$ dovrebbe essere quello che prende una certa sigma-algebra su uno spazio di misura (e l'insieme sottostante).
+\end{document}
